@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Intro component with sign up form</title>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-title">
+      <header>
+        <h1 class="title">Learn to code by watching others</h1>
+        <p class="subtext">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+          but understanding how developers think is invaluable. </p>
+      </header>
+    </div>
+    <div class="hero-content">
+      <main>
+        <button class="try-btn"><span class="btn-span">Try it free 7 days</span> then $20/mo. thereafter</button>
+        <form action="">
+          <div class="firstNameDiv">
+            <input type="text" class="fName" placeholder="First Name">
+            <div class="errorfName hide"></div>
+            <p class="errorfNameText hide">First Name cannot be empty</p>
+          </div>
+          <div class="lastNameDiv">
+            <input type="text" class="lName" placeholder="Last Name">
+            <div class="errorlName hide"></div>
+            <p class="errorlNameText hide">Last Name cannot be empty</p>
+          </div>
+          <div class="emailDiv">
+            <input type="email" class="email" placeholder="Email Address">
+            <div class="errorEmail hide"></div>
+            <p class="errorEmailText hide">Looks like this is not an email</p>
+          </div>
+          <div class="passwordDiv">
+            <input type="password" class="password" placeholder="Password">
+            <div class="errorPassword hide"></div>
+            <p class="errorPasswordText hide">Password cannot be empty</p>
+          </div>
+          <button class="submit" type="button">CLAIM YOUR FREE TRIAL</button>
+          <p class="description">By clicking the button, you are agreeing to our <span class="description-span">Terms and Services</span></p>
+        </form>
+      </main>
+    </div>
+  </div> 
+  <script src="main.js"></script>
+</body>
+</html>

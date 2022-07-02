@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-red-bg-error-span: hsl(0, 100%, 74%);
+    --primary-green-btn: hsl(154, 59%, 51%);
+    --accent-blue-btn: hsl(248, 32%, 49%);
+    --neutral-dark-blue-input: hsl(249, 10%, 26%);
+    --netutral-greyish-blue-placeholder: hsl(246, 25%, 77%);
+}
+
+body {
+    min-height: 100vh;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-red-bg-error-span);
+    background-image: url(/images/bg-intro-mobile.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    padding: 2.6rem 1.5rem 0 1.5rem;
+}
+
+.title {
+    font-size: 1.72rem;
+    color: white;
+    font-weight: 700;
+    line-height: 2.35rem;
+    text-align: center;
+}
+
+.subtext {
+    padding-top: 1.15rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hero-content {
+    padding-top: 3.15rem;
+    text-align: center;
+}
+
+.try-btn {
+    color: white;
+    font-size: .95rem;
+    background-color: var(--accent-blue-btn);
+    padding: .95rem 4.2rem .95rem 4.2rem;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0px 8px 3px hsla(249, 10%, 26%, 0.397);
+    font-weight: 400;
+    color: white;
+    line-height: 1.75rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.try-btn:hover {
+    opacity: .85;
+}
+
+.btn-span {
+    color: white;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: 0px 8px 3px hsla(249, 10%, 26%, 0.397);
+}
+
+.firstNameDiv, .lastNameDiv, .emailDiv, .passwordDiv {
+    position: relative;
+    width: 100%;
+}
+
+.fName, .lName, .email, .password {
+    color: var(--neutral-dark-blue-input);
+    font-size: .9rem;
+    font-weight: 600;
+    margin-top: 1.1rem;
+    width: 85%;
+    border-radius: .3rem;
+    padding-top: 1.05rem;
+    padding-bottom: 1.05rem;
+    padding-left: 1.1rem;
+    border-color: hsla(246, 25%, 77%, 0.575);
+    border-width: thin;
+    border-style:solid;
+    font-family: 'Poppins', Courier, monospace;
+}
+
+.fName:focus, .lName:focus, .email:focus, .password:focus {
+    outline: none !important;
+    border-color: var(--neutral-dark-blue-input);
+    border-width: thin;
+}
+
+.errorfName, .errorlName, .errorEmail, .errorPassword {
+    position: absolute;
+    content: '';
+    background-image: url(/images/icon-error.svg);
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    top: 2.15rem;
+    right: 0;
+    padding-right: 7.2rem;
+}
+
+.errorfNameText, .errorlNameText, .errorEmailText, .errorPasswordText {
+    text-align: right;
+    padding-right: 5.5rem;
+    font-size: 12px;
+    font-style: italic;
+    color: var(--primary-red-bg-error-span);
+}
+
+.submit {
+    margin-top: 1.1rem;
+    background-color: var(--primary-green-btn);
+    padding-top: 1.05rem;
+    padding-bottom: 1.05rem;
+    width: 85%;
+    color: white;
+    font-weight: 600;
+    font-size: .9rem;
+    border: none;
+    border-radius: .3rem;
+    box-shadow: 0px 3px 2px hsl(154, 57%, 37%);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit:hover {
+    opacity: .7;
+}
+
+.description {
+    text-align: center;
+    margin-top: 1.1rem;
+    width: 80%;
+    font-size: 0.65rem;
+    color: var(--netutral-greyish-blue-placeholder);
+    margin-bottom: 1.5rem;
+}
+
+.description-span {
+    color: var(--primary-red-bg-error-span);
+    font-weight: 700;
+}
+
+.hide {
+    display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        background-image: url(/images/bg-intro-desktop.png);
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 9rem 0 9rem;
+    }
+
+    .hero-content {
+        padding-top: 0rem;
+        width: 95%;
+    }
+
+    .hero-title {
+        display: flex;
+        align-items: center;
+        padding-right: 8.5rem;
+    }
+
+    .title {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    .subtext {
+        padding-top: 1.7rem;
+    }
+
+    form {
+        margin-top: 1.7rem;
+    }
+
+    .fName {
+        margin-top: 2.6rem;
+    }
+
+    .errorfName {  
+        top: 3.6rem;
+        right: 0;
+    }
+
+    .errorfName, .errorlName, .errorEmail, .errorPassword {
+        padding-right: 6.5rem;
+    }
+
+    .errorfNameText, .errorlNameText, .errorEmailText, .errorPasswordText {
+        padding-right: 2.9rem;
+    }
+
+    .description {
+        margin-bottom: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .errorfName, .errorlName, .errorEmail, .errorPassword {
+        padding-right: 3.75rem;
+    }
+
+    .errorfNameText, .errorlNameText, .errorEmailText, .errorPasswordText {
+        padding-right: 1.9rem;
+    }
+}
